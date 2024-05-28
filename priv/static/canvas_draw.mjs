@@ -2004,11 +2004,11 @@ var UserClickedClearCanvas = class extends CustomType {
 function default_model() {
   return new Model(
     new CtxNeedsInit(),
-    500,
-    500,
+    300,
+    300,
     "canvas",
-    250,
-    250,
+    150,
+    150,
     5,
     "#333333",
     false

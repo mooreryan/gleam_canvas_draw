@@ -54,11 +54,11 @@ type Model {
 fn default_model() -> Model {
   Model(
     CtxNeedsInit,
-    canvas_width: 500,
-    canvas_height: 500,
+    canvas_width: 300,
+    canvas_height: 300,
     canvas_id: "canvas",
-    mouse_x: 250.0,
-    mouse_y: 250.0,
+    mouse_x: 150.0,
+    mouse_y: 150.0,
     pen_r: 5,
     pen_color: "#333333",
     is_drawing: False,
