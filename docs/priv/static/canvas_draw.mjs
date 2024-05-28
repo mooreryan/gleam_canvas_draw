@@ -2025,7 +2025,7 @@ function view(model) {
       width(model.canvas_width),
       height(model.canvas_height),
       on2(
-        "mousedown",
+        "pointerdown",
         (event2) => {
           return map2(
             mouse_position(event2),
@@ -2038,7 +2038,7 @@ function view(model) {
         }
       ),
       on2(
-        "mousemove",
+        "pointermove",
         (event2) => {
           return map2(
             mouse_position(event2),
@@ -2051,7 +2051,7 @@ function view(model) {
         }
       ),
       on2(
-        "mouseup",
+        "pointerup",
         (event2) => {
           return map2(
             mouse_position(event2),
@@ -2084,7 +2084,7 @@ function view(model) {
                     throw makeError(
                       "assignment_no_match",
                       "canvas_draw",
-                      182,
+                      177,
                       "",
                       "Assignment pattern did not match",
                       { value: $ }

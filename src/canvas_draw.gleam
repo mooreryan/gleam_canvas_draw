@@ -151,22 +151,17 @@ fn view(model: Model) -> element.Element(Msg) {
       a.id("canvas"),
       a.width(model.canvas_width),
       a.height(model.canvas_height),
-      // ev.on("click", fn(event) {
-      //   use xy <- result.map(ev.mouse_position(event))
-      //   let #(x, y) = xy
-      //   UserClickedOnCanvas(x, y)
-      // }),
-      ev.on("mousedown", fn(event) {
+      ev.on("pointerdown", fn(event) {
         use xy <- result.map(ev.mouse_position(event))
         let #(x, y) = xy
         UserMouseDownInCanvas(x, y)
       }),
-      ev.on("mousemove", fn(event) {
+      ev.on("pointermove", fn(event) {
         use xy <- result.map(ev.mouse_position(event))
         let #(x, y) = xy
         UserMouseMoveInCanvas(x, y)
       }),
-      ev.on("mouseup", fn(event) {
+      ev.on("pointerup", fn(event) {
         use xy <- result.map(ev.mouse_position(event))
         let #(x, y) = xy
         UserMouseUpInCanvas(x, y)
